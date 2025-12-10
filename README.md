@@ -4,7 +4,7 @@ Professional landing pages and funnels for Live On Purpose webinars and offers.
 
 ## 🌐 Deployment
 
-This project is deployed on Vercel at `go.liveonpurposecentral.com`
+This project is deployed on Vercel at `go.drpauljenkins.com`
 
 ## 📁 Structure
 
@@ -70,8 +70,8 @@ Add images to `assets/images/` folder within each funnel and reference them:
 
 ## 🔗 Live URLs
 
-- **Root**: `go.liveonpurposecentral.com` → redirects to main site
-- **Create with Confidence**: `go.liveonpurposecentral.com/create-with-confidence`
+- **Root**: `go.drpauljenkins.com` → redirects to main site
+- **Create with Confidence**: `go.drpauljenkins.com/create-with-confidence`
 
 ## 💡 Tips
 
