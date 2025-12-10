@@ -205,7 +205,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
-    margin-bottom: 16px;
 }
 
 .timezone-item {
@@ -230,28 +229,6 @@ body {
     font-size: 14px;
     color: #2d3748;
     font-weight: 700;
-}
-
-.timezone-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: #1D7874;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 16px;
-    background: white;
-    border-radius: 8px;
-    border: 2px solid #1D7874;
-    transition: all 0.3s ease;
-}
-
-.timezone-link:hover {
-    background: #1D7874;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(29, 120, 116, 0.3);
 }
 
 .next-steps {
@@ -529,11 +506,6 @@ body {
         align-items: flex-start;
         gap: 4px;
         padding: 8px 12px;
-    }
-
-    .timezone-link {
-        width: 100%;
-        justify-content: center;
     }
 
     .calendar-buttons {
