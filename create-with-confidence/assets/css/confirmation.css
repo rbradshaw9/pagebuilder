@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .confirmation-header {
-    background: linear-gradient(135deg, #00B0DB 0%, #0099C6 100%);
+    background: linear-gradient(135deg, #1D7874 0%, #166963 100%);
     color: white;
     padding: 40px 40px 35px;
     text-align: center;
@@ -143,7 +143,7 @@ body {
 
 .webinar-details-box {
     background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-    border-left: 4px solid #00B0DB;
+    border-left: 4px solid #1D7874;
     padding: 30px;
     border-radius: 12px;
     margin-bottom: 35px;
@@ -216,7 +216,7 @@ body {
 .step-number {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, #00B0DB 0%, #0099C6 100%);
+    background: linear-gradient(135deg, #1D7874 0%, #166963 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -267,25 +267,25 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #00B0DB 0%, #0099C6 100%);
+    background: linear-gradient(135deg, #1D7874 0%, #166963 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(0, 176, 219, 0.4);
+    box-shadow: 0 4px 15px rgba(29, 120, 116, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 176, 219, 0.5);
-    background: linear-gradient(135deg, #0099C6 0%, #008AB5 100%);
+    box-shadow: 0 6px 20px rgba(29, 120, 116, 0.5);
+    background: linear-gradient(135deg, #166963 0%, #125551 100%);
 }
 
 .btn-secondary {
     background: white;
-    color: #00B0DB;
-    border: 2px solid #00B0DB;
+    color: #1D7874;
+    border: 2px solid #1D7874;
 }
 
 .btn-secondary:hover {
-    background: #00B0DB;
+    background: #1D7874;
     color: white;
 }
 
