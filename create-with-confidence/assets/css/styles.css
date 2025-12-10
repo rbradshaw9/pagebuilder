@@ -17,6 +17,22 @@ body {
     padding: 0 20px;
 }
 
+/* Header */
+.site-header {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -312,28 +328,99 @@ body {
 
 /* Host Section */
 .host-section {
-    text-align: center;
-    padding: 60px 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 80px 20px;
+    background: #f7fafc;
 }
 
-.host-section h3 {
+.host-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.host-image {
+    position: relative;
+}
+
+.host-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.host-content h3 {
     font-family: 'Playfair Display', serif;
     font-size: 32px;
     margin-bottom: 20px;
     color: #1a202c;
 }
 
-.host-info {
+.host-content p {
     font-size: 18px;
     color: #4a5568;
     line-height: 1.7;
 }
 
-.host-info strong {
+.host-content strong {
     color: #2d3748;
     font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+    background: #1a202c;
+    color: #a0aec0;
+    padding: 50px 20px 30px;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-divider {
+    margin: 0 15px;
+    opacity: 0.5;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.footer-copyright p {
+    margin: 0;
 }
 
 /* Responsive */
@@ -357,6 +444,17 @@ body {
 
     .content-section h2 {
         font-size: 28px;
+    }
+
+    .host-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .host-image {
+        max-width: 300px;
+        margin: 0 auto;
     }
 }
 
@@ -395,5 +493,21 @@ body {
 
     .benefits-list li {
         font-size: 15px;
+    }
+
+    .header-logo {
+        height: 40px;
+    }
+
+    .footer-logo img {
+        height: 40px;
+    }
+
+    .footer-links {
+        font-size: 13px;
+    }
+
+    .footer-divider {
+        margin: 0 10px;
     }
 }
