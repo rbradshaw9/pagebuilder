@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're Registered! - Create with Confidence Webinar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .confirmation-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .confirmation-header {
+            background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .confirmation-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        .success-icon {
+            font-size: 72px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: bounce 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .confirmation-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .confirmation-header p {
+            font-size: 18px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .confirmation-body {
+            padding: 50px 40px;
+        }
+
+        .webinar-details-box {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+        }
+
+        .webinar-details-box h2 {
+            font-size: 20px;
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .detail-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-icon {
+            font-size: 24px;
+            width: 40px;
+            flex-shrink: 0;
+        }
+
+        .detail-content {
+            flex: 1;
+        }
+
+        .detail-label {
+            font-size: 13px;
+            color: #718096;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            color: #2d3748;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .next-steps {
+            margin-top: 40px;
+        }
+
+        .next-steps h2 {
+            font-size: 24px;
+            color: #2d3748;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 25px;
+            align-items: start;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+
+        .step-content h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            font-size: 15px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .calendar-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 16px 28px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            border: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .email-notice {
+            background: #fffaf0;
+            border: 2px solid #fbd38d;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .email-notice p {
+            color: #744210;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .email-notice strong {
+            color: #5f370e;
+        }
+
+        .social-share {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .social-share h3 {
+            font-size: 18px;
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .social-share p {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        .share-facebook {
+            background: #1877f2;
+        }
+
+        .share-twitter {
+            background: #1da1f2;
+        }
+
+        .share-linkedin {
+            background: #0a66c2;
+        }
+
+        .share-email {
+            background: #718096;
+        }
+
+        @media (max-width: 640px) {
+            .confirmation-container {
+                border-radius: 0;
+            }
+
+            .confirmation-header {
+                padding: 40px 30px;
+            }
+
+            .confirmation-header h1 {
+                font-size: 32px;
+            }
+
+            .confirmation-body {
+                padding: 40px 30px;
+            }
+
+            .calendar-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .share-buttons {
+                flex-direction: column;
+            }
+
+            .share-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <div class="confirmation-header">
+            <div class="success-icon">🎉</div>
+            <h1>You're In!</h1>
+            <p>Your seat is reserved for Create with Confidence</p>
+        </div>
+
+        <div class="confirmation-body">
+            <div class="webinar-details-box">
+                <h2>Webinar Details</h2>
+                <div class="detail-row">
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-content">
+                        <div class="detail-label">Date</div>
+                        <div class="detail-value">Tuesday, January 6, 2026</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">🕐</div>
+                    <div class="detail-content">
+                        <div class="detail-label">Time</div>
+                        <div class="detail-value">11:00 AM Mountain Time</div>
+                    </div>
+                </div>
+                <div class="detail-row">
+                    <div class="detail-icon">💻</div>
+                    <div class="detail-content">
+                        <div class="detail-label">Format</div>
+                        <div class="detail-value">Live Online Event</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h2>What Happens Next?</h2>
+                
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Check Your Email</h3>
+                        <p>You'll receive a confirmation email with your unique webinar link and calendar invite. Make sure to check your spam folder if you don't see it within a few minutes.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add to Your Calendar</h3>
+                        <p>Block this time on your calendar and protect it. This session could be the turning point for your entire 2026.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Bring Something to Take Notes</h3>
+                        <p>This is a powerful framework you'll want to remember. Come prepared to capture insights and action steps.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Join Live on January 6th</h3>
+                        <p>Log in a few minutes early to ensure you don't miss anything. The webinar link will be in your confirmation email.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-buttons">
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Create+with+Confidence+Webinar&dates=20260106T180000Z/20260106T190000Z&details=Join+Dr.+Paul+Jenkins+for+a+powerful+live+webinar+on+the+psychology+behind+resolutions+that+actually+stick.&location=Online" target="_blank" class="btn btn-primary">
+                    📅 Add to Google Calendar
+                </a>
+                <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Create+with+Confidence+Webinar&startdt=2026-01-06T18:00:00Z&enddt=2026-01-06T19:00:00Z&body=Join+Dr.+Paul+Jenkins+for+a+powerful+live+webinar+on+the+psychology+behind+resolutions+that+actually+stick.&location=Online" target="_blank" class="btn btn-secondary">
+                    📅 Add to Outlook
+                </a>
+            </div>
+
+            <div class="email-notice">
+                <p>📧 <strong>Important:</strong> Watch your inbox for your confirmation email with the webinar access link. Add <strong>noreply@liveonpurpose.com</strong> to your contacts to ensure delivery.</p>
+            </div>
+
+            <div class="social-share">
+                <h3>Know Someone Who Needs This?</h3>
+                <p>Share this powerful opportunity with friends and family who are ready to make 2026 their breakthrough year.</p>
+                
+                <div class="share-buttons">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_REGISTRATION_PAGE_URL" target="_blank" class="share-btn share-facebook">
+                        Share on Facebook
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=I just registered for this powerful webinar on creating resolutions that actually stick! Join me: YOUR_REGISTRATION_PAGE_URL" target="_blank" class="share-btn share-twitter">
+                        Share on Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=YOUR_REGISTRATION_PAGE_URL" target="_blank" class="share-btn share-linkedin">
+                        Share on LinkedIn
+                    </a>
+                    <a href="mailto:?subject=Join me for this powerful webinar&body=I just registered for Create with Confidence: The Psychology Behind Resolutions that Actually Stick. Join me! YOUR_REGISTRATION_PAGE_URL" class="share-btn share-email">
+                        Share via Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add confetti effect on page load
+        console.log('Registration confirmed! 🎉');
+    </script>
+</body>
+</html>

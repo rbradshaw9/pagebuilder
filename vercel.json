@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://liveonpurposecentral.com",
+      "permanent": false
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
