@@ -39,6 +39,44 @@ body {
 
 /* Social Proof Bar */
 .social-proof-bar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 0;
+    font-size: 14px;
+}
+
+/* Video Section */
+.video-section {
+    padding: 60px 0;
+    background: #f7fafc;
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+/* Social Proof Bar */
+.social-proof-bar {
     background: #f7fafc;
     border-bottom: 1px solid #e2e8f0;
     padding: 12px 0;
@@ -565,6 +603,14 @@ body {
         padding: 16px 32px;
         width: 100%;
         max-width: 300px;
+    }
+
+    .video-section {
+        padding: 40px 0;
+    }
+
+    .video-container {
+        padding: 0 20px;
     }
 
     .form-section {
