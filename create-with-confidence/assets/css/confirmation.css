@@ -273,6 +273,14 @@ body {
     color: white;
 }
 
+.calendar-buttons small {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #718096;
+    font-weight: 400;
+}
+
 .email-notice {
     background: #fffaf0;
     border: 2px solid #fbd38d;

@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Live On Purpose//Create with Confidence Webinar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Create with Confidence Webinar
+X-WR-TIMEZONE:America/Denver
+X-WR-CALDESC:Join Dr. Paul Jenkins for a powerful live webinar
+BEGIN:VEVENT
+DTSTART:20260106T180000Z
+DTEND:20260106T190000Z
+DTSTAMP:20251210T000000Z
+UID:create-with-confidence-2026@drpauljenkins.com
+CREATED:20251210T000000Z
+DESCRIPTION:Create with Confidence: The Psychology Behind Resolutions that Actually Stick\n\nJoin Dr. Paul Jenkins for a free\, live webinar where you'll learn the 6-part psychological process that underlies every meaningful creation.\n\nYou'll discover:\n• The six phases every creation must pass through\n• How to know exactly where you are in the process\n• Why most resolutions fail and how to rebuild self-trust\n• How to apply this process to any goal\n\nWebinar Link: Will be sent via email\n\nQuestions? Contact: info@drpauljenkins.com
+LAST-MODIFIED:20251210T000000Z
+LOCATION:Online (Link will be emailed)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Create with Confidence Webinar - Dr. Paul Jenkins
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Create with Confidence Webinar starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Create with Confidence Webinar starts in 15 minutes
+TRIGGER:-PT15M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
