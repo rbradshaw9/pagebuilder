@@ -86,13 +86,16 @@
                         <strong>The Psychology Behind Resolutions that Actually Stick</strong> — Join Dr. Paul Jenkins for a powerful 60-minute session revealing the 6-part process behind every meaningful transformation
                     </p>
                     
-                    <!-- Webinar Date Box -->
+                    <!-- Webinar Date Box with Countdown -->
                     <div class="bg-gradient-to-r from-teal-700 to-teal-800 rounded-2xl p-6 sm:p-8 mb-8 card-shadow">
                         <div class="flex items-center justify-center mb-4">
                             <svg class="w-6 h-6 text-white mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <span class="text-white font-medium">🔴 Live Webinar:</span>
+                            <span class="text-white font-medium">⚡ Training starts in:</span>
+                        </div>
+                        <div id="countdown" class="text-4xl sm:text-5xl font-black text-white text-center mb-4">
+                            Loading...
                         </div>
                         <div class="text-2xl sm:text-3xl font-black text-white text-center mb-2">
                             Tuesday, January 6, 2026
@@ -420,7 +423,7 @@
                 <span class="hidden sm:inline">|</span>
                 <a href="https://drpauljenkins.com/wpautoterms/privacy-policy/" target="_blank" class="hover:text-white transition-colors inline-block">Privacy Policy</a>
             </div>
-            <p class="text-xs text-gray-500">© 2025 All Rights Reserved</p>
+            <p class="text-xs text-gray-500">© <span id="copyright-year"></span> All Rights Reserved</p>
         </div>
     </footer>
 
@@ -476,6 +479,36 @@
                 }
             });
         });
+
+        // Countdown Timer
+        const webinarDate = new Date('2026-01-06T18:00:00Z').getTime(); // 11:00 AM MT = 6:00 PM UTC
+        const countdownEl = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = webinarDate - now;
+
+            if (distance < 0) {
+                countdownEl.textContent = 'STARTING SOON!';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            if (days > 0) {
+                countdownEl.textContent = `${days}d ${hours}h ${minutes}m`;
+            } else if (hours > 0) {
+                countdownEl.textContent = `${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                countdownEl.textContent = `${minutes}m ${seconds}s`;
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
 
         // Exit Intent Popup
         let exitShown = false;

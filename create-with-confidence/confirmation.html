@@ -157,10 +157,15 @@
                         <span class="footer-divider">|</span>
                         <a href="https://drpauljenkins.com/wpautoterms/privacy-policy/" target="_blank">Privacy Policy</a>
                     </div>
-                    <p class="footer-copyright">© 2025 All Rights Reserved</p>
+                    <p class="footer-copyright">© <span id="copyright-year"></span> All Rights Reserved</p>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+    // Set copyright year
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
